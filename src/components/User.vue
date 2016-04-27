@@ -1,14 +1,16 @@
+<!-- 用户管理页面 -->
 <template>
-  <div class="user">
-    <!-- 模板中使用$loadingRouteData -->
-    <div v-if="$loadingRouteData">
-      Loading ...
-    </div>
-    <div v-if="!$loadingRouteData">
-      <h2>This is  user!</h2>
-      <p></p>
-    </div>
+<!--   <div class="user">
+  模板中使用$loadingRouteData
+  <div v-if="$loadingRouteData">
+    Loading ...
   </div>
+  <div v-if="!$loadingRouteData">
+    <h2>This is  user!</h2>
+    <p></p>
+  </div>
+</div> -->
+
 </template>
 <script>
 export default {

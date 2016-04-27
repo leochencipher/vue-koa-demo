@@ -1,5 +1,5 @@
 <template>
-
+  <nv-head></nv-head>
   <div class="container">
     <menu></menu>
     <side-bar></side-bar>
@@ -23,6 +23,7 @@ import $ from './assets/js/jquery.js'
 import './assets/css/main.css'
 import './assets/css/style.css'
 
+import NvHead from './components/Header'
 import Menu from './components/Menu'
 import SideBar from './components/SideBar'
 
@@ -36,6 +37,7 @@ export default {
     }
   },
   components: {
+    NvHead,
     Menu,
     SideBar
   }
@@ -45,10 +47,7 @@ export default {
 
 <style scoped>
 
-.container {
-  max-width: 1280px;
-  margin: 0 auto;
-}
+
 
 /* html {
   height: 100%;

@@ -76,7 +76,8 @@ export default {
 </script>
 <style scoped>
     .menu_list{
-      width:268px;
+      width: 15%;
+      min-width:200px;
       float: left;
     }
     .menu_head{

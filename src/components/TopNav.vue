@@ -37,25 +37,22 @@
   这样子我们可以使用text-align来对nav菜单进行左中右对齐设置
  */
 
-body {
-  font: 90%/160% Arial, Helvetica, sans-serif;
-  color: #666;
-  width: 900px;
-  max-width: 96%;
-  margin: 0 auto;
-}
 
 /* nav */
 .nav {
   position: relative;
-  margin: 20px 0;
+  background-color: #393737;
+  height: 35px;
+  line-height: 35px;
+  padding-left: 44px;
+  /* margin: 20px 0; */
 }
 .nav ul {
   margin: 0;
   padding: 0;
 }
 .nav li {
-  margin: 0 5px 10px 0;
+  margin: 0 5px 0 0;
   padding: 0;
   list-style: none;
   display: inline-block;
