@@ -1,14 +1,20 @@
 /*
 * @Author: baby
 * @Date:   2016-04-16 23:08:00
-* @Last Modified by:   baby
-* @Last Modified time: 2016-04-17 20:18:54
+* @Last Modified by:   fengyun2
+* @Last Modified time: 2016-04-27 12:35:54
 */
 
 export function configRouter (router) {
   // normal routes
   router.map({
     // basic example
+    '*': {
+      component: require('./views/Home.vue')
+    },
+    '/home': {
+      component: require('./views/Home.vue')
+    },
     '/hello': {
       // the component can also be a plain string component id,
       // but a component with that id must be available in the
@@ -43,8 +49,9 @@ export function configRouter (router) {
         }
       }
     },
-    '/bar': {
-      component: require('./components/Bar.vue')
+    '/menu': {
+      name: 'menu',
+      component: require('./components/Menu.vue')
     },
     '/user/:userId': {
       name: 'user', // 给这条路径加上一个名字

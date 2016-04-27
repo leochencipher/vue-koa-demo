@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
+import VueValidator from 'vue-validator'
 // import App from './App'
 
 import { configRouter } from './route-config'
@@ -11,6 +12,7 @@ require('es6-promise').polyfill()
 // 安装路由
 Vue.use(VueRouter)
 Vue.use(VueResource)
+Vue.use(VueValidator)
 
 // 创建一个路由器实例
 // 创建实例时可以传入配置参数进行定制，为保持简单，这里使用默认配置

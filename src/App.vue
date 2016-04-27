@@ -1,25 +1,56 @@
 <template>
-  <div>
-    <h1>Hello App!</h1>
-    <p>
-      <!-- 使用指令v-link 进行导航  -->
-      <a v-link="{ path: '/foo', exact: true, activeClass: 'active'}">Go to Foo</a>
-      <a v-link="{ path: '/bar'}">Go to Bar</a>
-      <a v-link="{ path: '/hello'}">Go to Hello</a>
-      <a v-link="{ name: 'user', params: { userId: 123 }}">Go to User</a>
-    </p>
-    <!-- 路由外链 -->
-    <router-view class="view" transition="test" transition-mode="out-in" keep-alive></router-view>
+
+  <div class="container">
+    <menu></menu>
+    <side-bar></side-bar>
   </div>
+
+<!--   <div>
+<p>
+使用指令v-link 进行导航
+<a v-link="{ path: '/home', exact: true, activeClass: 'active'}">Go to Home</a>
+<a v-link="{ path: '/menu', exact: true, activeClass: 'active'}">Go to Menu</a>
+<a v-link="{ path: '/hello', exact: true, activeClass: 'active'}">Go to Hello</a>
+<a v-link="{ name: 'user', params: { userId: 123 }, exact: true, activeClass: 'active'}">Go to User</a>
+</p>
+  路由外链
+  <router-view transition-mode="out-in" keep-alive></router-view>
+</div> -->
 </template>
 
 <script>
-export default {}
+import $ from './assets/js/jquery.js'
+import './assets/css/main.css'
+import './assets/css/style.css'
+
+import Menu from './components/Menu'
+import SideBar from './components/SideBar'
+
+export default {
+  ready () {
+
+  },
+  data () {
+    return {
+
+    }
+  },
+  components: {
+    Menu,
+    SideBar
+  }
+}
+
 </script>
 
-<style src="../node_modules/bootstrap/dist/css/bootstrap.css"></style>
-<style>
-html {
+<style scoped>
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* html {
   height: 100%;
 }
 
@@ -55,5 +86,5 @@ body {
 }
 #app .v-link-active {
     color: red;
-}
+} */
 </style>

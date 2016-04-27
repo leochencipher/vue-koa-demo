@@ -12,6 +12,7 @@
   </div>
 </template>
 <script>
+// import '../assets/js/jquery.js';
 export default {
   data () {
     return {
@@ -19,4 +20,6 @@ export default {
   }
 }
 </script>
-<style></style>
+<style scoped>
+
+</style>
