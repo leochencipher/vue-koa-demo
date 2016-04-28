@@ -3,7 +3,7 @@
   <div class="content">
     <h2>功能模块</h2>
     <ul class="clearfix">
-      <li class="flag">
+      <li class="flag clearfix">
         <a href="javascript:void(0);" class="figure flag-item">
           <img src="../../assets/images/grayscale.png" alt=""></a>
           <div class="right">
