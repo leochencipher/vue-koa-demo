@@ -1,11 +1,12 @@
 <!-- 右边组件 -->
 <template>
   <div class="content">
+    <h2>功能模块</h2>
     <ul class="clearfix">
       <li class="flag">
         <a href="javascript:void(0);" class="figure flag-item">
           <img src="../../assets/images/grayscale.png" alt=""></a>
-          <div>
+          <div class="right">
             <div class="figcaption flag-item"></div>
             <div class="flag-title"><a href="javascript:void(0);">平台管理员</a></div>
             <div class="flag-price">
@@ -113,24 +114,40 @@
                             </script>
                             <style scoped>
                               .content {
-                                /* position: relative; */
-                                /* float: left; */
+                                margin-right: 350px;
+                              }
+                              .content h2 {
+                                margin: 0;
+                                padding: 0;
+                                font-size: 16px;
+                                color: #333;
+                                height: 24px;
+                                line-height: 24px;
+                                margin-left: 47px;
                               }
                               .content ul {
                                 margin: 0;
                                 padding: 0;
                                 list-style: none;
                               }
+                              .content .right {
+                                margin-left: 103px;
+                              }
                               .flag {
                                 width: 311px;
                                 height: 121px;
                                 background-color: #fff;
                                 float: left;
+                                /* margin-left: 11px; */
+                                background-color: #00f;
 
                               }
                               .flag .flag-item.figure {
+                                display: block;
                                 width: 56px;
                                 height: 56px;
+                                padding-top: 32px;
+                                padding-bottom: 33px;
                               }
                               .flag .flag-item {
                                 background-color: #fff;
@@ -138,11 +155,12 @@
                               .flag .flag-item img {
                                 width: 56px;
                                 height: 56px;
+                                /* margin-left: 21px; */
+
                               }
 
                               .flag .flag-item.figcaption {
                                 position: relative;
-                                /* width: ; */
                                 float: left;
                               }
                               .flag .flag-title a {
@@ -155,5 +173,8 @@
                                 box-orient: vertical;
                                 display: -webkit-box;
                                 display: box;
+                                /* display: block; */
+
+
                               }
                             </style>

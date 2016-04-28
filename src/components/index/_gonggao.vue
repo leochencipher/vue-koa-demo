@@ -23,18 +23,21 @@
 </script>
 <style scoped>
 .gonggao {
-/*   position: absolute;
-top: 0;
-right: 0; */
-
-  float: right;
+  position: absolute;
+  top: 0;
+  right: 23px;
   width: 327px;
-  height: 31px;
-  margin-right: 23px;
+  /* height: 31px; */
 }
 .gonggao h2 {
   font-size: 16px;
-
+  margin: 0;
+  padding: 0;
+  height: 31px;
+  line-height: 31px;
+  background-color: #FDB490;
+  text-align: center;
+  color: #fff;
 }
 .gonggao ul {
   list-style: none;

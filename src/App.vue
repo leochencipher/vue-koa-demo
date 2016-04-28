@@ -3,7 +3,7 @@
   <div class="container clearfix">
     <top-nav></top-nav>
   </div>
-  <nav-foot></nav-foot>
+  <!-- <nav-foot></nav-foot> -->
 <!--   <div>
 <p>
 使用指令v-link 进行导航
@@ -24,7 +24,7 @@ import './assets/css/style.css'
 
 import NvHead from './components/_header'
 import TopNav from './components/_topnav'
-import NavFoot from './components/_footer'
+// import NavFoot from './components/_footer'
 /*import SideBar from './components/SideBar'*/
 
 export default {
@@ -38,8 +38,7 @@ export default {
   },
   components: {
     NvHead,
-    TopNav,
-    NavFoot
+    TopNav
   }
 }
 
@@ -49,6 +48,9 @@ export default {
 
 body {
   font-family:"Microsoft YaHei","微软雅黑","SimSun","宋体",Arial,sans-serif;
+}
+.container {
+  min-width: 1200px;
 }
 
 /* html {
