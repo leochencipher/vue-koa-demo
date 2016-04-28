@@ -2,20 +2,40 @@
 * @Author: baby
 * @Date:   2016-04-16 23:08:00
 * @Last Modified by:   fengyun2
-* @Last Modified time: 2016-04-27 12:35:54
+* @Last Modified time: 2016-04-28 10:09:41
 */
 
 export function configRouter (router) {
-  // normal routes
   router.map({
-    // basic example
+
+    /*后台首页*/
+    '/': {
+      component: require('./views/Index.vue')
+    },
+    /* 404 路由 */
     '*': {
-      component: require('./views/Home.vue')
+      component: require('./views/Index.vue')
     },
-    '/home': {
-      component: require('./views/Home.vue')
+    /*登录*/
+    '/sign': {
+      component: require('./views/Sign.vue'),
+      subRoutes: {
+        '/': {
+          component: require('./components/sign/_signin.vue'),
+        },
+        '/signup': {
+          component: require('./components/sign/_signup.vue')
+        }
+      }
     },
-    '/hello': {
+    '/user': {
+      component: require('./components/User.vue')
+    }
+
+/*    '/home': {
+      component: require('./views/Home.vue')
+    },*/
+/*    '/hello': {
       // the component can also be a plain string component id,
       // but a component with that id must be available in the
       // App component's scope.
@@ -48,15 +68,15 @@ export function configRouter (router) {
           }
         }
       }
-    },
-    '/menu': {
+    },*/
+/*    '/menu': {
       name: 'menu',
       component: require('./components/Menu.vue')
-    },
-    '/user/:userId': {
+    },*/
+/*    '/user/:userId': {
       name: 'user', // 给这条路径加上一个名字
       component: require('./components/User.vue')
-    }
+    }*/
 
     // // nested example
     // '/user/:userId': {

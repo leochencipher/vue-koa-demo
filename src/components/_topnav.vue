@@ -42,26 +42,34 @@
 .nav {
   position: relative;
   background-color: #393737;
-  height: 35px;
-  line-height: 35px;
+
   padding-left: 44px;
-  /* margin: 20px 0; */
 }
 .nav ul {
   margin: 0;
   padding: 0;
+  letter-spacing: -4px;
+  word-spacing: -4px;
+  font-size: 0;
 }
 .nav li {
   margin: 0 5px 0 0;
   padding: 0;
   list-style: none;
+  font-size: 16px;
+  letter-spacing: normal;
+  word-spacing: normal;
   display: inline-block;
+  *display: inline;
+  zoom:1;
 }
 .nav a {
-  padding: 3px 12px;
+  display: block;
+  height: 35px;
+  line-height: 35px;
+  padding: 0 12px;
   text-decoration: none;
   color: #999;
-  line-height: 100%;
 }
 .nav a:hover {
   color: #d0d0d0;

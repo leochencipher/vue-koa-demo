@@ -1,10 +1,9 @@
 <template>
   <nv-head></nv-head>
-  <div class="container">
-    <menu></menu>
-    <side-bar></side-bar>
+  <div class="container clearfix">
+    <top-nav></top-nav>
   </div>
-
+  <nav-foot></nav-foot>
 <!--   <div>
 <p>
 使用指令v-link 进行导航
@@ -19,13 +18,14 @@
 </template>
 
 <script>
-import $ from './assets/js/jquery.js'
+// import $ from './assets/js/jquery.js'
 import './assets/css/main.css'
 import './assets/css/style.css'
 
-import NvHead from './components/Header'
-import Menu from './components/Menu'
-import SideBar from './components/SideBar'
+import NvHead from './components/_header'
+import TopNav from './components/_topnav'
+import NavFoot from './components/_footer'
+/*import SideBar from './components/SideBar'*/
 
 export default {
   ready () {
@@ -38,16 +38,18 @@ export default {
   },
   components: {
     NvHead,
-    Menu,
-    SideBar
+    TopNav,
+    NavFoot
   }
 }
 
 </script>
 
-<style scoped>
+<style>
 
-
+body {
+  font-family:"Microsoft YaHei","微软雅黑","SimSun","宋体",Arial,sans-serif;
+}
 
 /* html {
   height: 100%;

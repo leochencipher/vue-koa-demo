@@ -1,10 +1,6 @@
-<!-- 后台菜单模块 -->
+<!-- 后台菜单组件 -->
 <template>
-<!--   <p>
-  This is Menu!
-</p> -->
   <top-nav></top-nav>
-
 </template>
 <script>
 import TopNav from './TopNav'
