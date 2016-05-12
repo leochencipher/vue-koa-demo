@@ -2,7 +2,7 @@
 * @Author: fengyun2
 * @Date:   2016-05-12 17:43:55
 * @Last Modified by:   fengyun2
-* @Last Modified time: 2016-05-12 17:54:32
+* @Last Modified time: 2016-05-12 21:00:12
 */
 
 'use strict';
@@ -36,5 +36,14 @@ app.use(session({
   store: sessionStore.create(),
   collection: 'koaSessions',
   connection: db,
-  expires: 30 * 60 * 1000
+  expires: 30 * 60 * 1000,
+  model: 'KoaSession'
 }));
+
+app.use(bodyParser()).
+use(frontendRouter.routes())
+.use(frontendRouter.allowedMethods());
+
+frontendRoutes(frontendRouter);
+
+app.listen(config.PORT);

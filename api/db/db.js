@@ -2,7 +2,7 @@
 * @Author: fengyun2
 * @Date:   2016-05-12 16:15:47
 * @Last Modified by:   fengyun2
-* @Last Modified time: 2016-05-12 16:30:33
+* @Last Modified time: 2016-05-12 21:08:36
 */
 
 /* 数据库连接 */
@@ -12,7 +12,7 @@
 let mongoose = require('mongoose');
 let config = require('../config/config');
 
-var db = mongoose.connect("mongoose://" + config.MongoDB.HOST + ":" + config.MongoDB.PORT + '/test');
+var db = mongoose.connect("mongodb://" + config.MongoDB.HOST + ":" + config.MongoDB.PORT + '/test');
 
 // 数据库连接
 var db = mongoose.connection;
