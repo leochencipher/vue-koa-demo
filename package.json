@@ -23,7 +23,21 @@
     "vue": "^1.0.18",
     "vue-resource": "^0.7.0",
     "vue-router": "^0.7.13",
-    "vue-validator": "^2.0.2"
+    "vue-validator": "^2.0.2",
+
+    "koa": "^0.21.0",
+    "koa-bodyparser": "^2.0.0",
+    "koa-generic-session": "^1.9.0",
+    "koa-router": "^5.1.2",
+    "koa-session-mongoose": "^0.5.2",
+    "koa-static": "^1.4.9",
+    "koa-views": "^3.1.0",
+    "lodash": "^3.10.0",
+    "log4js": "^0.6.26",
+    "marked": "^0.3.3",
+    "moment": "^2.10.3",
+    "mongoose": "^4.0.7",
+    "thunkify-wrap": "^1.0.4"
   },
   "devDependencies": {
     "babel-core": "^6.0.0",
