@@ -2,7 +2,7 @@
 * @Author: fengyun2
 * @Date:   2016-05-12 17:43:55
 * @Last Modified by:   fengyun2
-* @Last Modified time: 2016-05-12 21:00:12
+* @Last Modified time: 2016-05-12 23:40:39
 */
 
 'use strict';
@@ -40,6 +40,7 @@ app.use(session({
   model: 'KoaSession'
 }));
 
+// app.use(bodyParser());
 app.use(bodyParser()).
 use(frontendRouter.routes())
 .use(frontendRouter.allowedMethods());

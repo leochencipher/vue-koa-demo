@@ -2,29 +2,21 @@
 * @Author: fengyun2
 * @Date:   2016-05-12 23:03:27
 * @Last Modified by:   fengyun2
-* @Last Modified time: 2016-05-12 23:22:50
+* @Last Modified time: 2016-05-12 23:34:04
 */
 
-'use strict';
+var app     = require('koa')(),
+    router  = require('koa-router')(),
+    koaBody = require('koa-body')();
 
-var koa = require('koa');
-var route = require('koa-route');
-var parse = require('co-body');
-var app = new koa();
+router.post('/users', koaBody,
+  function *(next) {
+    console.log(this.request.body);
+    // => POST body
+    this.body = JSON.stringify(this.request.body);
+  }
+);
 
-app.use(route.post('/test', function* () {
-  var data = parse(this,{ textTypes: ['text', 'html', 'text/json'] }).then(function (value) {
-      console.log('222===========222');
-
-    console.log(value);
-    console.log(value.id);
-  console.log('222===========222');
-  }, function (err) {
-    console.log(err);
-  });
-  console.log('===========');
-  console.log('data: ', data);
-  console.log('===========');
-}));
+app.use(router.routes());
 
 app.listen(3000);
