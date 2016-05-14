@@ -2,7 +2,7 @@
 * @Author: fengyun2
 * @Date:   2016-05-12 17:43:55
 * @Last Modified by:   fengyun2
-* @Last Modified time: 2016-05-12 23:40:39
+* @Last Modified time: 2016-05-14 08:32:02
 */
 
 'use strict';
@@ -21,14 +21,19 @@ var frontendRoutes = require('./app/routes/frontend');
 // var response = require('./app/middlewares/response');
 var db = require('./db/db');
 
+// var errorHandler = require('./app/middlewares/error');
+
 let app = koa();
 
 let frontendRouter = new Router();
+
+// app.use(errorHandler());
 
 app.use(function* (next) {
   console.log(this.url);
   yield next;
 });
+
 
 app.keys = ['koa', 'blog'];
 
